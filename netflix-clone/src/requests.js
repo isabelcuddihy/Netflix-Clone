@@ -1,5 +1,8 @@
 // Double check the api key
+import axios from "axios";
+
 const API_KEY = "253293fd6119b5f47cd8bc1307581789";
+axios.defaults.headers.common['Authorization'] = `Bearer ${API_KEY}`; 
 
 
 const requests = {
