@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "./axios";
 
 /** Base url to make requests to the movie database */
 
