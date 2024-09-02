@@ -1,5 +1,6 @@
 .banner {
     padding-top: 50px;
+
     color: white;
     object-fit: contain;
     height: 448px;
@@ -15,15 +16,25 @@
     font-size: 3rem;
     font-weight: 800;
     padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
+    padding-left: 25px;
+}
+
+.banner__buttons {
+    padding-left: 25px;
 }
 
 .banner__description {
     width: 45rem;
     line-height: 1.3;
+    margin-top: 5rem;
     padding-top: 1rem;
-    font-size: 0.8rem;
+    padding-bottom: 1rem;
+    font-size: 0.9rem;
     max-width: 360px;
     height: 80px;
+    padding-left: 20px;
+    background-color: rgba(51,51,51,0.5);
 }
 
 .banner__button {
@@ -37,8 +48,9 @@
     padding-left: 2rem;
     padding-right: 2rem;
     margin-right: 1rem;
+    margin-top: 3rem;
     padding-top: 0.5rem;
-    background-color: rgba(51,51,51,0.5);
+    background-color: rgba(51,51,51,0.8);
     padding-bottom: 0.5rem;
 }
 
