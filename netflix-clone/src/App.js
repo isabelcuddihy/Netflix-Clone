@@ -13,7 +13,7 @@ function App() {
       {/* Banner */}
       <Banner/>
 
-      <h1>Hey Clever Programmer! Let's build a Netflix Clone</h1>
+
       
       {/* currently API does not support Netflix Originals Information Pull
           <Row 
