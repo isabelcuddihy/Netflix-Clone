@@ -141,3 +141,6 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 ## 📧 Contact
 
 For any questions or feedback, please reach out to us.
+
+## 🙏 Credits
+This project was partially built following a Frontend YouTube tutorial by Clever Programmer. We are grateful for the guidance provided by their content in creating this clone.
