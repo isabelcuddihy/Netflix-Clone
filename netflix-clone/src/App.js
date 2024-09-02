@@ -14,18 +14,20 @@ function App() {
       <Banner/>
 
       <h1>Hey Clever Programmer! Let's build a Netflix Clone</h1>
-      <Row 
+      /
+      {/* currently API does not support Netflix Originals Information Pull
+          <Row 
         title = "NETFLIX ORIGINALS" 
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow={true}
-        />
-      <Row title = "Trending Now" fetchUrl={requests.fetchTrending} />
-      <Row title = "Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Row title = "Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title = "Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-      <Row title = "Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title = "Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title = "Documentaries" fetchUrl={requests.fetchDocumentaries} />
+        /> */}
+      <Row title = "Trending Now Movies" fetchUrl={'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_release_type=2|3&release_date.gte={min_date}&release_date.lte={max_date}'} />
+      <Row title = "Top Rated Movies" fetchUrl={'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200'} />
+      <Row title = "Popular Movies" fetchUrl={'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc'} />
+      <Row title = "Upcoming Movies" fetchUrl={'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_release_type=2|3&release_date.gte={min_date}&release_date.lte={max_date}'} />
+      <Row title = "Now Airing TV" fetchUrl={'https://api.themoviedb.org/3/discover/tv?include_adult=false&language=en-US&page=1&sort_by=popularity.desc&air_date.lte={max_date}&air_date.gte={min_date}'} />
+      <Row title = "Top Rated TV" fetchUrl={'https://api.themoviedb.org/3/discover/tv?include_adult=false&language=en-US&page=1&sort_by=vote_average.desc&vote_count.gte=200'} />
+      <Row title = "Popular TV" fetchUrl={'https://api.themoviedb.org/3/discover/tv?include_adult=false&language=en-US&page=1&sort_by=popularity.desc'} />
     </div>
   );
 }
