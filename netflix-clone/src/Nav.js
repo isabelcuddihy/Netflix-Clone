@@ -1,26 +1,27 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Nav.css';
 
 
 function Nav() {
+    const [show, handleShow] = useState(false);
 
     //Scroll listener so black bar only shows up once user starts scrolling down page
-  
+   
   useEffect(() => {
     window.addEventListener("scroll", () => {
-        if(window.scroll > 1){
-           //handleShow(true); 
+        if(window.scrollY > 100){
+           handleShow(true); 
         }
         else handleShow(false);
     });
     return () => {
-        window.removeEventListener("scroll");
+        window.removeEventListener("scroll", this);
     };
 
   }, []);
 
     return (
-    <div className="nav">
+    <div className={`nav ${show && "nav_black"}`}>
         <img
         className="nav_logo"
         src={require('./image/Netflix_Logo_RGB.png')}
