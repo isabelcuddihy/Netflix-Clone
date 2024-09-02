@@ -12,11 +12,8 @@ function App() {
       <Nav/>
       {/* Banner */}
       <Banner/>
-
-
-      
-      {/* currently API does not support Netflix Originals Information Pull
-          <Row 
+     
+        {/*  <Row 
         title = "NETFLIX ORIGINALS" 
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow={true}

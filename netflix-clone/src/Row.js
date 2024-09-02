@@ -32,11 +32,10 @@ function Row({title, fetchUrl, isLargeRow}) {
 
 const handleClick = (movie) => {
 if (trailerUrl){
-  setTrailerUrl('');
-
+  setTrailerUrl("");
 }
 else{
-  movieTrailer(movie?.title || movie?.name || movie?.original_name|| "" )
+  movieTrailer(movie?.title || movie?.name || movie?.original_name || " ")
   .then(url => {
 
     const urlParams = new URLSearchParams( new URL(url).search);
@@ -46,7 +45,7 @@ else{
   .catch((error) => console.log(error));
 }
 };
-    //console.log(movies);
+    
   return (
     <div className="row">
       <h2>{title}</h2>
