@@ -16,7 +16,9 @@ function Banner() {
 
     console.log(movie);
     return (
-        <header> {/* <<< Background image*/}
+        <header> 
+            <div className="banner_contents"></div>     
+            {/* <<< Background image*/}
             {/* Title */}
             {/* div > 2 buttons */}
             {/* Description*/}
