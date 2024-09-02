@@ -1,10 +1,14 @@
 import axios from './axios';
 import React, {useState, useEffect} from 'react';
 import './Row.css'
+import YouTube from "react-youtube";
 
 const base_url = "https://image.tmdb.org/t/p/original/"
 function Row({title, fetchUrl, isLargeRow}) {
     const [movies, setMovies] = useState([]);
+    const [trailerUrl, setTrailerUrl] = useState("");
+
+    
     //A snippet of code that runs based on a specific condition or variable
     useEffect(()=>{
         //if []run once when the row loads and then don't run again
@@ -16,6 +20,15 @@ function Row({title, fetchUrl, isLargeRow}) {
         }
         fetchData();
     }, [fetchUrl]);
+
+    const opts = {
+      height: "390",
+      width: "100%",
+      playerVars: {
+        autoplay: 1,
+      },
+    };
+
 
     //console.log(movies);
   return (
@@ -31,7 +44,7 @@ function Row({title, fetchUrl, isLargeRow}) {
           alt={movie.name}
           />))}
       </div>
-    
+    <YouTube videoId = {trailerUrl} opts={opts} />
     </div>
   )
 
